@@ -26,6 +26,7 @@ Version History
 ===============
 ```
 (Date format: dd/mm/yyyy)
+* 26/9/2017 Uninstall AVG and download file example
 * 9/7/2017 First commit
 
 ```
