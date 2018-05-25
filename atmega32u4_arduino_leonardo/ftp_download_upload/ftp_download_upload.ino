@@ -19,9 +19,9 @@ void loop() {
   delay(2000);
   Keyboard.println("PASSWORD");
   delay(5000);
-  Keyboard.println("GET ARCHIVOPARADESCARGAR");
+  Keyboard.println("get FILE");
   delay(2000);
-  Keyboard.println("PUT ARCHIVOPARASUBIR");
+  Keyboard.println("put FILE");
   delay(2000);
   Keyboard.println("quit");
   delay(2000);
